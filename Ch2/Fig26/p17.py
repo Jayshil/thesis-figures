@@ -27,14 +27,14 @@ star, planet = 'TOI-561', 'TOI-561b'
 #star, planet = 'TOI-1807', 'TOI-1807b'
 
 # Occultation depth spectrum
-wav_fpfs, fpfs = np.loadtxt(os.getcwd() + '/Data/Zilinskas/' + planet + '_FpFs.dat', usecols=(0,1), unpack=True)
+wav_fpfs, fpfs = np.loadtxt(os.getcwd() + '/Ch2/Fig26/Zilinskas/' + planet + '_FpFs.dat', usecols=(0,1), unpack=True)
 
 # Planetary spectrum
-wav_fp, fp = np.loadtxt(os.getcwd() + '/Data/Zilinskas/' + planet + '_Fp.dat', usecols=(0,1), unpack=True)
+wav_fp, fp = np.loadtxt(os.getcwd() + '/Ch2/Fig26/Zilinskas/' + planet + '_Fp.dat', usecols=(0,1), unpack=True)
 fp = ( fp * 1e-6 * u.erg / u.s / u.cm**2 / u.Hz ).to(u.W / u.m**2 / u.Hz)
 
 # Stellar spectrum
-wav_st, st = np.loadtxt(os.getcwd() + '/Data/Zilinskas/' + star + '_stel_spec.dat', usecols=(0,1), unpack=True)
+wav_st, st = np.loadtxt(os.getcwd() + '/Ch2/Fig26/Zilinskas/' + star + '_stel_spec.dat', usecols=(0,1), unpack=True)
 wav_st = ( wav_st * u.cm ).to(u.micron)
 st = ( st * u.erg / u.s / u.cm**3 ).to(u.W / u.m**2 / u.Hz, equivalencies=u.spectral_density(wav=wav_st))
 
