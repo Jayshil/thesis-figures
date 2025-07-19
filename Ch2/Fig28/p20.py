@@ -40,8 +40,8 @@ tim = tc + (phases*per)
 #tim = np.linspace(tc-per/2-t14, tc+per/2+t14, 10000)
 #phases = juliet.utils.get_phases(t=tim, P=per, t0=tc, phmin=1.)
 
-fp, c1, d1 = 0.0057608005, 0.0021444080, -0.0004145816
-c2, d2 = 0.0001746626, -0.0000055102
+fp, c1, d1 = 6.37149862e-03, 2.60528065e-03, -1.30985903e-03
+c2, d2 = 7.73801450e-05, -1.09305107e-04
 
 def CowanPC_model(times, te, per, E, C1, D1, C2, D2):
     omega_t = 2 * np.pi * (times - te) / per
@@ -83,7 +83,7 @@ fig, axs = plt.subplots(figsize=(16/3, 9/3))
 axs.plot(phases, fl_tot, 'k-', zorder=10)
 axs.axhline(1., color='k', ls='--', lw=0.7, zorder=5)
 axs.set_xlim([-0.6, 0.6])
-axs.set_ylim([0.997, 1.007])
+axs.set_ylim([0.997, 1.0075])
 
 axs.set_xlabel('Orbital phase', labelpad=10)
 axs.set_ylabel('Relative flux')
