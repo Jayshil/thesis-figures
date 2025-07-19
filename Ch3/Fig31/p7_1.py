@@ -8,6 +8,12 @@ import matplotlib
 import os
 import plotstyles
 
+# ------------------------------------------------------------------------------
+#
+#                       To plot TESS FFI
+#
+# ------------------------------------------------------------------------------
+
 # Defining colors from colormap (will define 10 colors -- and will choose 2 out of them)
 chex = np.array([])
 norm = matplotlib.colors.Normalize(vmin=0, vmax=1000)
@@ -18,7 +24,7 @@ for i in range(11):
 # 0 1 2 3 4 5 6 7 8 9 10
 
 # Sector 8, time 500
-fname = os.getcwd() + '/Data/TESS/tess2019036055935-s0008-1-3-0136-s/tess2019036055935-s0008-1-3-0136-s_ffic.fits'
+fname = os.getcwd() + '/Ch3/Fig31/tess2019036055935-s0008-1-3-0136-s_ffic.fits'
 # Sector 35, time 500
 #fname = os.getcwd() + '/mastDownload/TESS/tess2021043234908-s0035-1-4-0205-s/tess2021043234908-s0035-1-4-0205-s_ffic.fits'
 # Sector 45, time 500
@@ -81,4 +87,4 @@ cp2 = ConnectionPatch(xyA=(pix_x+100, pix_y+100), xyB=(1, 1), axesA=axs, axesB=a
 
 plt.tight_layout()
 #plt.show()
-plt.savefig('tess_ffi.pdf')#, dpi=500)
+plt.savefig('Ch3/Fig31/tess_ffi.pdf')#, dpi=500)

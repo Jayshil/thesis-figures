@@ -7,6 +7,12 @@ import matplotlib
 import os
 import plotstyles
 
+# ------------------------------------------------------------------------------
+#
+#                       To plot CHEOPS subarray
+#
+# ------------------------------------------------------------------------------
+
 # Defining colors from colormap (will define 10 colors -- and will choose 2 out of them)
 chex = np.array([])
 norm = matplotlib.colors.Normalize(vmin=0, vmax=1000)
@@ -16,7 +22,7 @@ for i in range(11):
     chex = np.hstack((chex, c2))
 # 0 1 2 3 4 5 6 7 8 9 10
 
-hdul = fits.open(os.getcwd() + '/Data/CH_PR100008_TG000801_TU2021-02-28T20-16-28_SCI_CAL_SubArray_V0200.fits')
+hdul = fits.open(os.getcwd() + '/Ch3/Fig31/CH_PR100008_TG000801_TU2021-02-28T20-16-28_SCI_CAL_SubArray_V0200.fits')
 
 cal = hdul[1].data
 tim = hdul[2].data['BJD_TIME']
@@ -38,4 +44,4 @@ plt.setp(axs.get_yticklabels(), fontsize=14)
 
 plt.tight_layout()
 #plt.show()
-plt.savefig('cheops_subarray.pdf')#, dpi=500)
+plt.savefig('Ch3/Fig31/cheops_subarray.pdf')#, dpi=500)
