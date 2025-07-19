@@ -7,6 +7,12 @@ import astropy.constants as con
 import astropy.units as u
 import plotstyles
 
+# ------------------------------------------------------------------------------
+#
+#                  To plot models of transmission spectra 
+#
+# ------------------------------------------------------------------------------
+
 co2_aubun = [1e-4, 1e-5]
 
 
@@ -152,5 +158,5 @@ ax.text(4.2, 1.98, r'CO$_2$ mass fraction = 10$^{-5}$', color='dodgerblue')
 #ax.set_facecolor('transparent')
 
 plt.tight_layout()
-plt.show()
-#plt.savefig('PhDThesis/trans_spec_model.pdf')#, dpi=500, transparent=True)
+#plt.show()
+plt.savefig('Ch2/Fig24/trans_spec_model.pdf')#, dpi=500, transparent=True)
