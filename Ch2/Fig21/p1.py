@@ -57,8 +57,8 @@ plt.setp(ax.get_yticklabels(), fontsize=20)
 ax.set_xlim([-0.05, 0.05])
 ax.set_ylim([0.967, 1.003])
 plt.tight_layout()
-plt.show()
-#plt.savefig('PhDThesis/transitW431_phs.pdf')#, dpi=250)
+#plt.show()
+plt.savefig('Ch2/Fig21/transitW431_phs.pdf')#, dpi=250)
 
 # ------------------------------------------------------------------------------
 #
@@ -90,5 +90,5 @@ plt.setp(ax.get_yticklabels(), fontsize=20)
 ax.set_xlim([0.5-0.05, 0.5+0.05])
 #ax.set_ylim([0.970, 1.003])
 plt.tight_layout()
-plt.show()
-#plt.savefig('PhDThesis/occultationW431.pdf')#, dpi=250)
+#plt.show()
+plt.savefig('Ch2/Fig21/occultationW431.pdf')#, dpi=250)
