@@ -39,7 +39,7 @@ wav_st = ( wav_st * u.cm ).to(u.micron)
 st = ( st * u.erg / u.s / u.cm**3 ).to(u.W / u.m**2 / u.Hz, equivalencies=u.spectral_density(wav=wav_st))
 
 # First let's plot planetary spectrum (Fp/F*)
-fig, axs = plt.subplots(figsize=(16/2, 9/2))
+fig, axs = plt.subplots(figsize=(16/2.5, 9/2.5))
 axs.plot(wav_fpfs, fpfs, color=chex[2], lw=1.5)
 axs.set_xlim([np.min(wav_fp), np.max(wav_fp)])
 
@@ -52,11 +52,11 @@ axs.set_xlabel('Wavelength [$\mu$m]')
 axs.set_ylabel(r'F$_p$/F$_\star$ [ppm]')
 
 plt.tight_layout()
-#plt.show()
-plt.savefig(os.getcwd() + '/Ch2/Fig26/pl_fpfs.pdf')#,dpi=500)"""
+plt.show()
+#plt.savefig(os.getcwd() + '/Ch2/Fig26/pl_fpfs.pdf')#,dpi=500)"""
 
 # Stellar spectrum
-fig, axs = plt.subplots(figsize=(16/2.5, 9/2.5))
+fig, axs = plt.subplots(figsize=(16/2.5, 9.5/2.5))
 axs.plot(wav_st, st, color='crimson', lw=1.5)
 axs.set_xlim([np.min(wav_fp), np.max(wav_fp)])
 
@@ -70,8 +70,8 @@ axs.set_ylabel(r'Stellar Flux [W m$^{-2}$ Hz$^{-1}$]')
 
 plt.tight_layout()
 
-#plt.show()
-plt.savefig(os.getcwd() + '/Ch2/Fig26/st_fl.pdf')#,dpi=500)
+plt.show()
+#plt.savefig(os.getcwd() + '/Ch2/Fig26/st_fl.pdf')#,dpi=500)
 
 # Planet's spectrum
 fig, axs = plt.subplots(figsize=(16/2.5, 9/2.5))
@@ -93,7 +93,7 @@ axs.set_xticks(ticks=np.array([1., 10.]),\
                labels=np.array(['1', '10']))
 
 axs.set_xlabel(r'Wavelength [$\mu$m]')
-axs.set_ylabel(r'Planetary Flux [W m$^{-2}$ Hz$^{-1}$]')
+axs.set_ylabel(r'Planet Flux [W m$^{-2}$ Hz$^{-1}$]')
 
 axs.set_xlim([np.min(wav_fp), np.max(wav_fp)])
 axs.indicate_inset_zoom(axins, edgecolor="black")

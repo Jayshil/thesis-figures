@@ -16,7 +16,7 @@ rc('font', **{'family': 'serif'})
 rcParams['figure.figsize'] = [16/1.5, 9/1.5]
 
 rcParams['axes.linewidth'] = 1.5
-rcParams['axes.labelsize'] = 16
+rcParams['axes.labelsize'] = 18
 rcParams['axes.titlepad'] = 8
 rcParams['axes.titlesize'] = 18
 
@@ -26,8 +26,8 @@ rcParams['image.cmap'] = 'plasma'
 
 rcParams['xtick.direction'] = 'in'
 rcParams['ytick.direction'] = 'in'
-rcParams['xtick.labelsize']= 14
-rcParams['ytick.labelsize']= 14
+rcParams['xtick.labelsize']= 16
+rcParams['ytick.labelsize']= 16
 
 rcParams['font.size'] = 14.
 
