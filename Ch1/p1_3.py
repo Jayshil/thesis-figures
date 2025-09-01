@@ -43,10 +43,10 @@ ax.set_yticks(ticks=np.array([1.0, 0.995, 0.990, 0.985, 0.980, 0.975, 0.970]),\
 ax.set_xticks(ticks=np.array([-1.0, -0.75, -0.5, -0.25, 0., 0.25, 0.5, 0.75, 1.0]),\
               labels=np.array(['$-$1', '', '$-$0.5', '', '0', '', '0.5', '', '1']))
 
-ax.set_xlabel('Time since mid transit [hr]', fontsize=24)
-ax.set_ylabel('Relative flux', fontsize=24)
-plt.setp(ax.get_xticklabels(), fontsize=20)
-plt.setp(ax.get_yticklabels(), fontsize=20)
+ax.set_xlabel('Time since mid transit [hr]', fontsize=27)
+ax.set_ylabel('Relative flux', fontsize=27)
+plt.setp(ax.get_xticklabels(), fontsize=23)
+plt.setp(ax.get_yticklabels(), fontsize=23)
 
 ax.set_xlim([-1., 1.])
 ax.set_ylim([0.965, 1.003])

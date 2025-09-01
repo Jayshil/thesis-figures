@@ -15,7 +15,7 @@ def gaus(x, amp, mu, std):
 
 
 l1, l2 = 588.995095*10, 589.592424*10
-x = np.linspace(l1-10, l2+10, 10000)
+x = np.linspace(l1-11, l2+10, 10000)
 vdop, c = 551 * 2e2, 299798452  # both is m/s
 
 shift1, shift2 = vdop * l1 / c, -vdop * l1 / c
@@ -29,17 +29,17 @@ axs.plot(x, spec_base, 'k-')
 axs.plot(x, spec_blue+1.2, ls='-', color='cornflowerblue')
 axs.plot(x, spec_red-1.2, ls='-', color='orangered')
 
-axs.text(x[100], spec_base[100]-0.3, 'Baseline', fontsize=20)
-axs.text(x[100], spec_blue[100]+1.2-0.3, 'Blueshift', fontsize=20, color='navy')
-axs.text(x[100], spec_red[100]-1.2-0.3, 'Redshift', fontsize=20, color='maroon')
+axs.text(x[100]-0.5, spec_base[100]-0.3-0.05, 'Baseline', fontsize=25)
+axs.text(x[100]-0.5, spec_blue[100]+1.2-0.3-0.05, 'Blueshift', fontsize=25, color='navy')
+axs.text(x[100]-0.5, spec_red[100]-1.2-0.3-0.05, 'Redshift', fontsize=25, color='maroon')
 
 axs.set_yticks(ticks=np.array([]), labels=np.array([]))
 
-axs.set_xlabel('Wavelength [Å]', fontsize=24)
-axs.set_ylabel('Arbitrary units', fontsize=24)
+axs.set_xlabel('Wavelength [Å]', fontsize=27)
+axs.set_ylabel('Arbitrary units', fontsize=27)
 
-plt.setp(axs.get_xticklabels(), fontsize=20)
-plt.setp(axs.get_yticklabels(), fontsize=20)
+plt.setp(axs.get_xticklabels(), fontsize=23)
+plt.setp(axs.get_yticklabels(), fontsize=23)
 
 plt.tight_layout()
 

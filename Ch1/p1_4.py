@@ -34,13 +34,13 @@ tim = np.linspace(tc-1.5*per, tc+1.5*per, 1000)
 fig, axs = plt.subplots(figsize=(16/2, 9/2))
 axs.plot(tim-tc, radvel_rv_model(tim), 'k-')
 
-axs.set_xlabel('Time [d]', fontsize=24)
-axs.set_ylabel('Radial velocity [m/s]', fontsize=24)
+axs.set_xlabel('Time [d]', fontsize=27)
+axs.set_ylabel('Radial velocity [m/s]', fontsize=27)
 
 axs.set_ylim([-600., 600.])
 
-plt.setp(axs.get_xticklabels(), fontsize=20)
-plt.setp(axs.get_yticklabels(), fontsize=20)
+plt.setp(axs.get_xticklabels(), fontsize=23)
+plt.setp(axs.get_yticklabels(), fontsize=23)
 
 
 plt.tight_layout()
