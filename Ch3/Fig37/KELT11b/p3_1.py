@@ -108,6 +108,7 @@ gs = gd.GridSpec(4, 1, height_ratios=[3,1,1,3], hspace=0.1)
 ax00 = plt.subplot(gs[0])
 ax00.errorbar(times_hr, (fluxes-1)*1e4, yerr=fl_errs*1e4, fmt='.', color='dodgerblue', zorder=1)
 ax00.plot(times_hr, (model-1)*1e4, color='navy', lw=2., zorder=10)
+plt.setp(ax00.get_yticklabels(), fontsize=16)
 ax00.xaxis.set_major_formatter(plt.NullFormatter())
 
 ax0 = plt.subplot(gs[1])
@@ -115,6 +116,8 @@ ax0.plot(times_hr, lin_med*1e4, lw=1., color=chex[1])
 #ax0.plot(times_hr, (lin_med+lin_up)*1e4, lw=0.5, color=chex[1])
 #ax0.plot(times_hr, (lin_med-lin_lo)*1e4, lw=0.5, color=chex[1])
 ax0.fill_between(times_hr, y1=(lin_med-lin_lo)*1e4, y2=(lin_med+lin_up)*1e4, color=chex[1], alpha=0.3)
+
+plt.setp(ax0.get_yticklabels(), fontsize=16)
 
 ax0.xaxis.set_major_formatter(plt.NullFormatter())
 
@@ -125,17 +128,22 @@ ax1.plot(times_hr, gp_med*1e4, lw=1.5, color=chex[5])
 ax1.fill_between(times_hr, y1=(gp_med-gp_lo)*1e4, y2=(gp_med+gp_up)*1e4, color=chex[5], alpha=0.3)
 ax1.xaxis.set_major_formatter(plt.NullFormatter())
 
+plt.setp(ax1.get_yticklabels(), fontsize=16)
+
 ax2 = plt.subplot(gs[3])
 ax2.plot(times_highres_hr, (fl_med-1)*1e4, lw=1.5, color=chex[8])
 #ax2.plot(times_highres_hr, (fl_med+fl_up-1)*1e4, lw=0.3, color=chex[8])
 #ax2.plot(times_highres_hr, (fl_med-fl_lo-1)*1e4, lw=0.3, color=chex[8])
 ax2.fill_between(times_highres_hr, y1=(fl_med-fl_lo-1)*1e4, y2=(fl_med+fl_up-1)*1e4, color=chex[8], alpha=0.3)
-ax2.set_xlabel('Time since the beginning [hr]')
+ax2.set_xlabel('Time since the beginning [hr]', fontsize=18)
 
-fig.supylabel(r'Relative flux [$\times$ 10$^2$ ppm]', x=0.0001)
+plt.setp(ax2.get_xticklabels(), fontsize=16)
+plt.setp(ax2.get_yticklabels(), fontsize=16)
+
+fig.supylabel(r'Rel. flux [$\times$ 10$^2$ ppm]', fontsize=18, x=0.0001)
 
 sns.despine()
 
 plt.tight_layout()
-plt.show()
-#plt.savefig('Ch3/Fig37/KELT11b/Figures/kel11b_models.pdf')
+#plt.show()
+plt.savefig('Ch3/Fig37/KELT11b/Figures/kel11b_models1.pdf')

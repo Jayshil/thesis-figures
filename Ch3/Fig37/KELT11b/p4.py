@@ -60,6 +60,14 @@ axs[0,0].yaxis.set_major_formatter(plt.NullFormatter())
 axs[1,0].yaxis.set_major_formatter(plt.NullFormatter())
 axs[2,0].yaxis.set_major_formatter(plt.NullFormatter())
 
+plt.setp(axs[0,0].get_xticklabels(), fontsize=16)
+plt.setp(axs[0,1].get_xticklabels(), fontsize=16)
+plt.setp(axs[1,0].get_xticklabels(), fontsize=16)
+plt.setp(axs[1,1].get_xticklabels(), fontsize=16)
+plt.setp(axs[2,0].get_xticklabels(), fontsize=16)
+plt.setp(axs[2,1].get_xticklabels(), fontsize=16)
+
+
 #fig.supylabel('Density', x=0.05)
 
 plt.tight_layout()
