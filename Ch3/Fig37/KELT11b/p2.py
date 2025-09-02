@@ -33,12 +33,14 @@ axs.errorbar(tim, (fl-1.)*1e4, yerr=fle*1e4, fmt='.', color='dodgerblue')
 
 axs.set_xlim([ np.min(tim), np.max(tim) ])
 
-axs.set_xlabel('Time since beginning [hr]', fontsize=18)
+axs.set_xlabel('Time since beginning [hr]', fontsize=20)
 #axs.set_ylabel(r'Relative flux [$\times$ 10$^2$ ppm]')
-fig.supylabel(r'Rel. flux [$\times$ 10$^2$ ppm]', x=0.07, fontsize=18)
+fig.supylabel(r'Rel. flux [$\times$ 10$^2$ ppm]', x=0.07, fontsize=20)
 
-plt.setp(axs.get_xticklabels(), fontsize=16)
-plt.setp(axs.get_yticklabels(), fontsize=16)
+#axs.set_xticks(ticks=np.array([0.0, 2.5, 5.0, 7.5, 10.5, 12.5]))
+
+plt.setp(axs.get_xticklabels(), fontsize=18)
+plt.setp(axs.get_yticklabels(), fontsize=18)
 
 sns.despine()
 
