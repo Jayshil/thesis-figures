@@ -79,12 +79,15 @@ axs[0].axhline(np.mean(tra_dep/1e4), color='gray', lw=0.7, zorder=5)
 axs[0].set_xlim([5, 10.5])
 axs[0].set_ylim([2.44, 2.54])
 
-axs[0].text(5.5, 2.455, 'Band averaged\ntransit depth', color='gray')
+axs[0].text(5.5, 2.455, 'Band averaged\ntransit depth', color='gray', fontsize=16)
 
 axs[0].set_yticks(ticks=np.array([2.44, 2.48, 2.52]))
 
 #axs.set_xlabel('Wavelength [$\mu$m]')
-axs[0].set_ylabel('Transit depth [%]')
+axs[0].set_ylabel('Transit depth [%]', fontsize=18)
+
+plt.setp(axs[0].get_xticklabels(), fontsize=16)
+plt.setp(axs[0].get_yticklabels(), fontsize=16)
 
 # --------------------------------------------------------
 # --------------------------------------------------------
@@ -128,11 +131,14 @@ axs[1].set_ylim([0, 7.85])
 #axs.set_yticks(ticks=np.array([4000, 5000, 6000, 7000, 8000]))
 
 #axs.set_xlabel('Wavelength [$\mu$m]')
-axs[1].set_ylabel(r'F$_p$/F$_\star$ [$\times$ 10$^3$ ppm]')
-fig.supxlabel('Wavelength [$\mu$m]', y=0.1)
+axs[1].set_ylabel(r'F$_p$/F$_\star$ [$\times$ 10$^3$ ppm]', fontsize=18)
+fig.supxlabel('Wavelength [$\mu$m]', y=0.1, fontsize=18)
+
+plt.setp(axs[1].get_xticklabels(), fontsize=16)
+plt.setp(axs[1].get_yticklabels(), fontsize=16)
 
 sns.despine()
 
 plt.tight_layout()
 #plt.show()
-plt.savefig('Ch3/Fig34/w43_miri_spectra.pdf')
+plt.savefig('Ch3/Fig34/w43_miri_spectra1.pdf')
