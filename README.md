@@ -1,0 +1,1 @@
+This repo contains the code to generate all original figures from my PhD thesis. My PhD thesis, entitled "Exploring close-in exoplanets with space telescopes", can be found [here](https://jayshil.github.io/Blog/PhD_thesis_Jayshil_A_Patel.pdf).
